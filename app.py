@@ -1,23 +1,79 @@
 import time
 import streamlit as st
 
-# Set page configuration
+# Page setup with custom icon
 st.set_page_config(
-    page_title="I'm So Sorry, Shristi!", page_icon="⚡", layout="centered"
+    page_title="For Shristi ⚡", page_icon="⚡", layout="centered"
 )
 
-# Title & Subtitle
-st.title("⚡ A Special Message for Shristi ⚡")
-st.subheader("from a sleepy and silly friend... 🥺")
+# Custom Styling (Gradients, Card Borders, Custom Fonts & Animations)
+st.markdown(
+    """
+    <style>
+    /* Background gradient */
+    .stApp {
+        background: linear-gradient(135deg, #1e1e2f 0%, #0f0c20 100%);
+        color: #ffffff;
+    }
+    
+    /* Header card */
+    .header-card {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 2rem;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        text-align: center;
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        margin-bottom: 2rem;
+    }
+    
+    /* Custom button styling */
+    .stButton > button {
+        width: 100%;
+        background: linear-gradient(90deg, #ff4b4b 0%, #ff7676 100%);
+        color: white;
+        font-size: 1.1rem;
+        font-weight: 600;
+        padding: 0.75rem 1rem;
+        border-radius: 12px;
+        border: none;
+        box-shadow: 0 4px 15px rgba(255, 75, 75, 0.4);
+        transition: all 0.3s ease;
+    }
+    
+    .stButton > button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(255, 75, 75, 0.6);
+    }
+    
+    /* Styled dividers */
+    hr {
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+    </style>
+""",
+    unsafe_allow_html=True,
+)
 
-st.divider()
+# Decorated Header Box
+st.markdown(
+    """
+    <div class="header-card">
+        <h1 style="color: #ffe600; font-size: 2.5rem; margin-bottom: 0.5rem;">⚡ A Special Message for Shristi ⚡</h1>
+        <p style="color: #b0b0d0; font-size: 1.1rem; font-style: italic;">Tere pyaare 'Bijli ke Khamba' ki taraf se... 🥺</p>
+    </div>
+""",
+    unsafe_allow_html=True,
+)
 
-# Updated natural opening
-st.write("### Hey Shristi...")
-st.write("I know I messed up earlier, and I'm genuinely sorry. T-T")
+# Opening Section
+st.markdown("### ✨ Hey Shristi...")
+st.info("I know I messed up earlier, Shristi, and I'm genuinely sorry. T-T")
+
+st.write("")
 
 # Detailed explanation section
-with st.expander("👉 What actually happened"):
+with st.expander("🔍 What actually happened"):
     st.write(
         """
     1. You gave me the nickname **“Bijli Ka Khamba”** ⚡
@@ -31,7 +87,7 @@ with st.expander("👉 What actually happened"):
     )
 
 # Cute/Funny nickname section
-with st.expander("👉 ⚡ Official Bijli Ka Khamba Report"):
+with st.expander("⚡ Official 'Bijli Ka Khamba' Status Report"):
     st.write(
         """
     * **At first:** *“Hein? Konsa nickname?”* 💀
@@ -44,20 +100,19 @@ with st.expander("👉 ⚡ Official Bijli Ka Khamba Report"):
 
 st.divider()
 
-# Softer closing section (replacing "Final Verdict")
-st.write("### One last thing… ❤️")
-st.write(
+# Softer closing section
+st.markdown("### ❤️ One last thing…")
+st.markdown(
     """
-I know I messed up, and I'm genuinely sorry, Shristi.
-I didn't mean “wrong person” the way it sounded.
-
-It was just my sleepy brain being stupid at the worst possible moment. 😭
-You're my good friend, and I really didn't want to hurt you or make you feel ignored.
-I'm sorry. T-T
+> I know I messed up, and I'm genuinely sorry, Shristi. I didn't mean “wrong person” the way it sounded.
+> 
+> It was just my sleepy brain being stupid at the worst possible moment. 😭 You're my good friend, and I really didn't want to hurt you or make you feel ignored. I'm sorry. T-T
 """
 )
 
-# No-pressure single button
+st.write("")
+
+# Interactive Forgiveness Action
 if st.button("Okay, apology received. 👍"):
     st.balloons()
     st.success(
@@ -67,8 +122,9 @@ if st.button("Okay, apology received. 👍"):
     Now please stop being angry at this idiot. 😭
     
     *— Bijli Ka Khamba ⚡*
-    """
+    """,
+        icon="✨",
     )
 
 st.divider()
-st.caption("Coded with pure Python, extra regret, and lots of respect.")
+st.caption("⚡ Coded with pure Python, extra regret, and lots of respect.")
