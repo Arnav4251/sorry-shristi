@@ -50,22 +50,18 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# Regret Meter
-st.write("### 📊 Current Status")
-st.progress(100, text="Regret Level: 100% | Sleepiness: 0%")
-
-st.write("")
-
 # Opening
 st.markdown("### ✨ Hey Shristi...")
 st.info("I know I messed up earlier, Shristi, and I'm genuinely sorry. T-T")
 
-# Sad Hamster GIF
-st.image(
-    "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmdwbWRsa244M3VqNzM4aXk5amEwbmlubThyeWJucXZycGRqNDdmbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/98MaHVwJOmWMz4cz1K/giphy.gif",
-    caption="Live footage of me feeling guilty 🐹💔",
-    use_container_width=True,
-)
+# Centered & Compact Sad Hamster GIF (Using Columns)
+col1, col2, col3 = st.columns([1, 2, 1])
+with col2:
+    st.image(
+        "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmdwbWRsa244M3VqNzM4aXk5amEwbmlubThyeWJucXZycGRqNDdmbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/98MaHVwJOmWMz4cz1K/giphy.gif",
+        caption="Live footage of me feeling guilty 🐹💔",
+        use_container_width=True,
+    )
 
 st.write("")
 
@@ -111,11 +107,13 @@ st.write("")
 # Button Action with Audio Playback
 if st.button("Okay, apology received. 👍"):
     st.balloons()
-    
+
     # Direct MP3 audio link for the Happy Happy Happy song
-    audio_url = "https://www.myinstants.com/media/sounds/happy-happy-happy-cat.mp3"
+    audio_url = (
+        "https://www.myinstants.com/media/sounds/happy-happy-happy-cat.mp3"
+    )
     st.audio(audio_url, autoplay=True)
-    
+
     st.success(
         """
     **Thank you for reading this, Shristi. ❤️**
