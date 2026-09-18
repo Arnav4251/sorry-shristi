@@ -44,7 +44,7 @@ st.markdown(
     """
     <div class="header-card">
         <h1 style="color: #ffe600; font-size: 2.2rem; margin-bottom: 0.5rem;">⚡ A Special Message for Shristi ⚡</h1>
-        <p style="color: #b0b0d0; font-size: 1rem; font-style: italic;">Tere pyaare 'Bijli ke Khamba' ki taraf se... 🥺</p>
+        <p style="color: #b0b0d0; font-size: 1rem; font-style: italic;">from your officially sleepy & silly friend... 🥺</p>
     </div>
 """,
     unsafe_allow_html=True,
@@ -52,7 +52,7 @@ st.markdown(
 
 # Opening
 st.markdown("### ✨ Hey Shristi...")
-st.info("I know I messed up earlier, Shristi, and I'm genuinely sorry. T-T")
+st.info("I know I messed up earlier,and I'm genuinely sorry. T-T")
 
 # Centered & Compact Sad Hamster GIF (Using Columns)
 col1, col2, col3 = st.columns([1, 2, 1])
